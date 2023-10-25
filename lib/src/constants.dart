@@ -13,6 +13,8 @@ const String nl = 'nl';
 const String zh = 'zh';
 const String ar = 'ar';
 const String pt = 'pt';
+const String ha = 'ha';
+const String he = 'he';
 
 extension LocaleExtension on Locale {
   List<String> get months {
@@ -40,6 +42,10 @@ extension LocaleExtension on Locale {
         return arMonths;
       case pt:
         return ptMonths;
+      case ha:
+        return hijriMonthsArabic;
+      case he:
+        return hijriMonthsEnglish;
       default:
         return enMonths;
     }
@@ -214,4 +220,33 @@ const List<String> ptMonths = [
   'outubro',
   'novembro',
   'dezembro',
+];
+const List<String> hijriMonthsArabic = [
+  'مُحَرَّم',
+  'صَفَر',
+  'رَبِيع الأوَّل',
+  'رَبِيع الثاني',
+  'جُمَادى الأوَّل',
+  'جُمَادى الثانية',
+  'رَجَب',
+  'شَعْبَان',
+  'رَمَضَان',
+  'شَوَّال',
+  'ذُو الْقَعْدَة',
+  'ذُو الْحِجَّة',
+];
+
+const List<String> hijriMonthsEnglish = [
+  'Muharram',
+  'Safar',
+  'Rabi\' al-Awwal',
+  'Rabi\' al-Thani',
+  'Jumada al-Awwal',
+  'Jumada al-Thaniyah',
+  'Rajab',
+  'Sha\'ban',
+  'Ramadan',
+  'Shawwal',
+  'Dhu al-Qi\'dah',
+  'Dhu al-Hijjah',
 ];
